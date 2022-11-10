@@ -34,7 +34,6 @@ const HeaderContent = styled(FlexViewBetween)`
 const BlurView = styled(FlexView)<{
   alpha:number
 }>`
-  filter: blur(2px);
   position: absolute;
   left:0;
   top:0;

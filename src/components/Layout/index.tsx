@@ -22,7 +22,6 @@ const Layout = ({
       width: autoWidthVW(page_width),
       overflow: 'hidden',
       alignItems:'flex-start',
-      // backgroundColor:'rgba(0,0,0,.1)'
       paddingTop:autoWidthVW(header_height+10),
       paddingBottom:autoWidthVW(footer_height+10),
     }}>

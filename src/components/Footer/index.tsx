@@ -44,7 +44,7 @@ function MusiclyricButton(){
   }
 
   return <FlexView>
-    <TextBold onClick={onShowLyric}>歌词</TextBold>
+    <TextBold onClick={onShowLyric}>歌词图标</TextBold>
   </FlexView>
 }
 function MusicLyricView({onClose}:any){
@@ -56,7 +56,7 @@ function MusicListButton(){
   const [open, setOpen] = useState(false);
 
   return <FlexView>
-    <TextBold onClick={()=>setOpen(true)}>歌单</TextBold>
+    <TextBold onClick={()=>setOpen(true)}>歌曲列表图标</TextBold>
     <Drawer
       bodyStyle={{padding:0,backgroundColor:'#121212'}}
       zIndex={20}
@@ -91,7 +91,6 @@ const SaleButtonView = styled(FlexView)`
   cursor: pointer;
 `
 const Content = styled(FlexViewBetween)`
-  background-color: red;
   width:${autoWidthVW(page_width)};
   height:100%;
 `

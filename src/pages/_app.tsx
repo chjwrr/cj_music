@@ -57,7 +57,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 const MainView = styled(FlexViewColumn)`
   width: 100%;
-  /* height:100%; */
   z-index: 10;
 `
 export default MyApp

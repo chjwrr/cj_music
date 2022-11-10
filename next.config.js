@@ -15,7 +15,13 @@ const nextConfig = {
   images: {
     // loader: 'akamai',
     // path:'',
-    domains: ['images.unsplash.com'],
+    domains: [
+      'p1.music.126.net'
+    ],
+  },
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true
   }
 };
 

@@ -16,7 +16,7 @@ import ParticlesBg from 'particles-bg'
 // "custom"
 function Background() {
   return <BackGroundView>
-    <ParticlesBg num={100} type="lines" bg={true}/>
+    <ParticlesBg num={100} type="lines"/>
   </BackGroundView>
 }
 const BackGroundView = styled(FlexView)`
@@ -25,8 +25,14 @@ const BackGroundView = styled(FlexView)`
   top:0;
   left:0;
   right:0;
-  width:100%;
+  z-index:1;
+  background-color: black;
+  background-position:center;
+  /* background-image:url(${ImageCommon.icon_01}); */
+  background-size:cover;
+  background-repeat: no-repeat;
+  width:auto;
   height:100%;
-  z-index:1
+  /* filter:blur(2px); */
 `
 export default Background
