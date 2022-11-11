@@ -21,7 +21,6 @@ export const queryClient = new QueryClient({
     },
   },
 });
-console.log('process.env====',process.env)
 export const ReactQueryProvider = ({ children }:any) => (
   <QueryClientProvider client={queryClient}>
     <ReactQueryDevtools />
