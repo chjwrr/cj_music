@@ -1,9 +1,17 @@
+# todo
+
+- 安装postman测试接口
+- json转interface对象
+
+
+
+
 网易云音乐API地址
 https://neteasecloudmusicapi.vercel.app/#/?id=neteasecloudmusicapi
 
 
-
-
+接口地址
+https://www.chjk.cf
 
 
 由于接口做了缓存处理 ( 缓存 2 分钟,不缓存数据极容易引起网易服务器高频 ip 错误 , 可在 app.js 设置 , 可能会导致登录后获取不到 cookie), 相同的 url 会在两分钟内只向网易服务器发一次请求 , 如果遇到不需要缓 存结果的接口 , 可在请求 url 后面加一个时间戳参数使 url 不同 , 例子 : /simi/playlist?id=347230&timestamp=1503019930000 (之所以加入缓存机制是因为项目早期没有缓存机制，很多 issues 都是报 IP 高频，请按自己需求改造缓存中间件(app.js)，源码不复杂)
