@@ -2,8 +2,8 @@ import enJson from './en/common.json'
 import cnJson from './cn/common.json'
 
 export enum LocalLanguage {
-  EN=0,
-  CN=1
+  EN='en',
+  CN='cn'
 }
 const LocalesCommon = {
   [LocalLanguage.EN]:enJson,

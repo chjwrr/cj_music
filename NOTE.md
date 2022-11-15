@@ -1,7 +1,7 @@
 # todo
 
 - 安装postman测试接口
-- json转interface对象
+- json转interface对象   JSON to TS
 
 
 
@@ -26,37 +26,37 @@ http://p4.music.126.net/JzNK4a5PjjPIXAgVlqEc5Q==/109951164154280311.jpg?param=50
 
 
 # 歌手
-- 热门歌手 /top/artists?offset=0&limit=30
+- 热门歌手 /top/artists?offset=0&limit=30   artists
 说明 : 调用此接口 , 可获取热门歌手数据
 可选参数 : limit: 取出数量 , 默认为 50
 offset: 偏移数量 , 用于分页 , 如 :( 页数 -1)*50, 其中 50 为 limit 的值 , 默认 为 0
 
-- 歌手分类列表: /artist/list?type=1&area=96&initial=b&offset=(页数 -1)*30
+- 歌手分类列表: /artist/list?type=1&area=96&initial=b&offset=(页数 -1)*30   artists
 limit : 返回数量 , 默认为 30
 offset : 偏移数量，用于分页 ,  如 :(页数 -1)*30, 其中 30 为 limit 的值 , 默认为 0
 initial: 按首字母索引查找参数,如 initial=b 返回内容将以 name 字段开头为 b 或者拼音开头为 b
 type 取值:-1:全部 1:男歌手 2:女歌手 3:乐队
 area 取值: -1:全部 7华语 96欧美 8:日本 16韩国 0:其他
 
-- 歌手热门 50 首歌曲: /artist/top/song?id=6452
+- 歌手热门 50 首歌曲: /artist/top/song?id=6452   song
 id : 歌手 id
 
-- 歌手全部歌曲: /artist/songs?id=6452
+- 歌手全部歌曲: /artist/songs?id=6452    song
 id : 歌手 id
 可选参数 :
 order : hot ,time 按照热门或者时间排序
 limit: 取出歌单数量 , 默认为 50
 offset: 偏移数量 , 用于分页 , 如 :( 评论页数 -1)*50, 其中 50 为 limit 的值
 
-- 获取歌手单曲 /artists?id=6452
+- 获取歌手信息 /artists?id=6452   artists + song
 说明 : 调用此接口 , 传入歌手 id, 可获得歌手部分信息和热门歌曲
 必选参数 : id: 歌手 id, 可由搜索接口获得
 
-- 获取歌手 mv /artist/mv?id=6452
+- 获取歌手 mv /artist/mv?id=6452   mv
 说明 : 调用此接口 , 传入歌手 id, 可获得歌手 mv 信息 , 具体 mv 播放地址可调 用/mv传入此接口获得的 mvid 来拿到 , 如 : /artist/mv?id=6452,/mv?mvid=5461064
 必选参数 : id: 歌手 id, 可由搜索接口获得
 
-- 获取歌手专辑 /artist/album?id=6452&limit=5 ( 周杰伦 )
+- 获取歌手专辑 /artist/album?id=6452&limit=5 ( 周杰伦 )    
 说明 : 调用此接口 , 传入歌手 id, 可获得歌手专辑内容
 必选参数 : id: 歌手 id
 可选参数 : limit: 取出数量 , 默认为 30

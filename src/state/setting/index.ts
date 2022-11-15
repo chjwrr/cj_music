@@ -1,17 +1,16 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
+import { LocalLanguage } from "../../../public/locales/LocalesCommon";
 import {AppState} from "../index";
 
-// EN=0,
-// CN=1
 export interface SettingState {
-  language:number,
+  language:LocalLanguage,
 }
 
 const initialState:SettingState = {
-  language:1
+  language:LocalLanguage.EN
 }
-export function useLanguage(): number {
+export function useLanguage(): LocalLanguage {
     return useSelector((state: AppState) => state.setting.language)
 }
 export const settingSlice = createSlice({

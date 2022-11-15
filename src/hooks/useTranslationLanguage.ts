@@ -2,8 +2,11 @@ import LocalesCommon,{LocalLanguage} from "../../public/locales/LocalesCommon";
 import { useLanguage } from "../state/setting";
 
 export default function useTranslationLanguage(){
-  const language = useLanguage()
-  const languageJson:any = LocalesCommon[language as LocalLanguage]
+  const language:LocalLanguage = useLanguage()
+  let languageJson:any = LocalesCommon[language]
+  if(!languageJson){
+    languageJson = LocalesCommon[LocalLanguage.EN]
+  }
   function t(key:string){
     return languageJson[key]
   }

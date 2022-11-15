@@ -5,7 +5,6 @@ axios.defaults.timeout = 15000
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-export const homeBanner_url:string = '/banner'
 
 
 function getUrlWithParams(pathName:string,params?:any){
