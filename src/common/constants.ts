@@ -7,7 +7,7 @@ export const footer_height = 70
 export const page_width = 1200
 
 export const colors = {
-  main: '#02F2FF',
+  main: '#75FBF9',
   active:'#ECB91A',
   white:'#fff',
 }

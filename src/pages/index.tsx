@@ -5,21 +5,42 @@ import { useSpring,animated } from 'react-spring'
 import styled from 'styled-components'
 import ImageCommon from '../../public/images/ImageCommon'
 import Layout from '../components/Layout'
-import LineAnimal from '../components/LineAnimal'
+import { GetServerSideProps } from 'next'
 
 import {Song} from '../interface/song'
-const Home:NextPage = () => {
+import SongList from '../interface/songList'
+
+
+const Home:NextPage = (props:any) => {
+
+  const abc:SongList[] = JSON.parse(JSON.stringify(props.songList))
+  console.log('歌单数据=',abc)
 
   return (
     <Layout>
-      <div>
-        <iframe
-        allowFullScreen
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        src="https://sketchfab.com/models/5dcebcfaedbd4e7b8a27bd1ae55f1ac3/embed?autospin=1&autostart=1">
-        </iframe>
-      </div>
     </Layout>
   )
 }
+export const getServerSideProps: GetServerSideProps<{ data: any }> = async (context) => {
+  const songListRes = await fetch(`https://www.chjk.cf/personalized?limit=10`)
+  const songListData = await songListRes.json()
+  
+  
+  if (!songListData || songListData.code != 200) {
+    return {
+      notFound: true,
+    }
+    // return {
+    //   redirect: {
+    //     destination: '/',
+    //     permanent: false,
+    //   },
+    // }
+  }
+
+  return { props: { 
+    songList:songListData.result
+   } }
+}
+
 export default Home

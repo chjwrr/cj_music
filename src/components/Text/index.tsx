@@ -15,7 +15,7 @@ export const Text = styled.span<{
     font-size:${({size})=>autoWidthVW(size??12)};
   };
   white-Space:break-spaces;
-  font-family: 'BOOKOSI';
+  font-family: BOOKOSI
 `
 
 export const TextBold = styled(Text)`

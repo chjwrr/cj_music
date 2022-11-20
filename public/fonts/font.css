@@ -1,10 +1,21 @@
 
 @font-face {
   font-family: 'BOOKOSI';
-  src: url('/fonts/BOOKOSI.TTF') format('opentype');
+  src: url('/fonts/Hyk2gj.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'flow';
+  src: url('/fonts/flow.otf') format('opentype');
   font-style: normal;
 }
 
-
-
+/*
+url("woff2字体链接") format("woff2"),
+url("woff字体链接") format("woff"),
+url("ttf字体链接") format("truetype"),
+url("eot字体链接") format("embedded-opentype"),
+url("svg字体链接") format("svg"),
+url("otf字体链接") format("opentype");
+*/
 

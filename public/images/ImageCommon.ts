@@ -1,5 +1,5 @@
-const icon_01 = '/images/icon_01.png';
+const logo = '/images/logo.png';
 const ImageCommon:any = {
-  icon_01
+  logo
 }
 export default ImageCommon;
