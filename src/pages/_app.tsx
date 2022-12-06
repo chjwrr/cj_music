@@ -41,9 +41,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Provider store={store}>
           <LoadingProvider>
             <ModalProvider>
-              <BackgroundDynamic/>
+              {/* <BackgroundDynamic/> */}
               <MainView>
-                <HeaderDynamic/>
+                {/* <HeaderDynamic/> */}
                 <Component {...pageProps} />
                 {/* <FooterDynamic/> */}
               </MainView>

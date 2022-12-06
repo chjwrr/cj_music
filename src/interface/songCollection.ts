@@ -1,4 +1,5 @@
-interface SongList {
+// 歌单
+export default interface SongCollection {
   id: number,
   type: number,
   name: string,
@@ -11,4 +12,3 @@ interface SongList {
   highQuality: boolean,
   alg: string
 }
-export default SongList

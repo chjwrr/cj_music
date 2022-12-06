@@ -1,50 +1,63 @@
-export interface Song {
+// 歌曲
+export default interface RootObject {
+  id: number;
+  type: number;
+  name: string;
+  copywriter?: any;
+  picUrl: string;
+  canDislike: boolean;
+  trackNumberUpdateTime?: any;
+  song: Song;
+  alg: string;
+}
+
+interface Song {
   name: string;
   id: number;
-  pst: number;
-  t: number;
-  ar: Ar[];
-  alia: any[];
-  pop: number;
-  st: number;
-  rt: string;
+  position: number;
+  alias: any[];
+  status: number;
   fee: number;
-  v: number;
-  crbt?: any;
-  cf: string;
-  al: Al;
-  dt: number;
-  h: H;
-  m: H;
-  l: H;
-  sq: H;
-  hr?: any;
-  a?: any;
-  cd: string;
+  copyrightId: number;
+  disc: string;
   no: number;
+  artists: Artist[];
+  album: Album;
+  starred: boolean;
+  popularity: number;
+  score: number;
+  starredNum: number;
+  duration: number;
+  playedNum: number;
+  dayPlays: number;
+  hearTime: number;
+  sqMusic: SqMusic;
+  hrMusic: SqMusic;
+  ringtone: string;
+  crbt?: any;
+  audition?: any;
+  copyFrom: string;
+  commentThreadId: string;
   rtUrl?: any;
   ftype: number;
   rtUrls: any[];
-  djId: number;
   copyright: number;
-  s_id: number;
+  transName?: any;
+  sign?: any;
   mark: number;
   originCoverType: number;
-  originSongSimpleData: OriginSongSimpleData;
-  tagPicList?: any;
-  resourceState: boolean;
-  version: number;
-  songJumpInfo?: any;
-  entertainmentTags?: any;
-  awardTags?: any;
+  originSongSimpleData?: any;
   single: number;
   noCopyrightRcmd?: any;
   rtype: number;
   rurl?: any;
-  mst: number;
-  cp: number;
-  mv: number;
-  publishTime: number;
+  mvid: number;
+  bMusic: SqMusic;
+  mp3Url?: any;
+  hMusic: SqMusic;
+  mMusic: SqMusic;
+  lMusic: SqMusic;
+  exclusive: boolean;
   privilege: Privilege;
 }
 
@@ -90,38 +103,59 @@ interface FreeTrialPrivilege {
   listenType?: any;
 }
 
-interface OriginSongSimpleData {
-  songId: number;
+interface SqMusic {
+  name?: any;
+  id: number;
+  size: number;
+  extension: string;
+  sr: number;
+  dfsId: number;
+  bitrate: number;
+  playTime: number;
+  volumeDelta: number;
+}
+
+interface Album {
   name: string;
+  id: number;
+  type: string;
+  size: number;
+  picId: number;
+  blurPicUrl: string;
+  companyId: number;
+  pic: number;
+  picUrl: string;
+  publishTime: number;
+  description: string;
+  tags: string;
+  company: string;
+  briefDesc: string;
+  artist: Artist;
+  songs: any[];
+  alias: any[];
+  status: number;
+  copyrightId: number;
+  commentThreadId: string;
   artists: Artist[];
-  albumMeta: Artist;
+  subType: string;
+  transName?: any;
+  onSale: boolean;
+  mark: number;
+  gapless: number;
+  picId_str: string;
 }
 
 interface Artist {
-  id: number;
   name: string;
-}
-
-interface H {
-  br: number;
-  fid: number;
-  size: number;
-  vd: number;
-  sr: number;
-}
-
-interface Al {
   id: number;
-  name: string;
+  picId: number;
+  img1v1Id: number;
+  briefDesc: string;
   picUrl: string;
-  tns: any[];
-  pic_str: string;
-  pic: number;
-}
-
-interface Ar {
-  id: number;
-  name: string;
-  tns: any[];
+  img1v1Url: string;
+  albumSize: number;
   alias: any[];
+  trans: string;
+  musicSize: number;
+  topicPerson: number;
 }
